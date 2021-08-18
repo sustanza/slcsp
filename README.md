@@ -22,7 +22,7 @@ The application requires 3 arguments and an optional 4th. These are the 3 files 
 * ```zips.csv```
 * ```plans.csv```
 
-These are all included in the data directory in the root of this project. An optional 4th argument is the final output of the slcsp file with the SLCSP rate associate to the correct zip code. By default, the application just overrides the ```slcsp.csv``` file as per the requirements. However, this was added as an additional optional argument so that the original file wouldn't be modified upon execution of the application.
+These are all included in the data directory in the root of this project. An optional 4th argument is the final output of the slcsp file with the SLCSP rate associated to the correct zip code. By default, the application just overrides the ```slcsp.csv``` file as per the requirements. However, this was added as an additional optional argument so that the original file wouldn't be modified upon execution of the application.
 
 ### Running via NPM scripts in the CLI
 ```npm run start "./data/slcsp.csv" "./data/zips.csv" "./data/plans.csv" "./data/slcspfinal.csv"```
@@ -38,7 +38,7 @@ Will run the tests with test data in the ```./data``` directory
 ```npm run test```
 
 For coverage results
-```npm run test --coverage```
+```npm run test:coverage```
 
 ### Test Use cases
 * Zip with 1 rate area, and 3 rates.

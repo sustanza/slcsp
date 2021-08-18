@@ -15,7 +15,6 @@
         "start": "node index.js",
         "start:defaults": "node index.js \"./data/slcsp.csv\" \"./data/zips.csv\" \"./data/plans.csv\" \"./data/slcspfinal.csv\"",
         "test": "jest",
-        "test:ci": "jest --ci --runInBand --coverage",
         "test:coverage": "jest --coverage",
         "pretty": "prettier --write \"./**/*.{js,json}\""
     }

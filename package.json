@@ -1,0 +1,22 @@
+{
+    "name": "slcsp",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "csv": "^5.5.0",
+        "jsdoc": "^3.6.7",
+        "prettier": "^2.3.2"
+    },
+    "devDependencies": {
+        "jest": "^27.0.6"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "start:defaults": "node index.js \"./data/slcsp.csv\" \"./data/zips.csv\" \"./data/plans.csv\" \"./data/slcspfinal.csv\"",
+        "test": "jest",
+        "test:ci": "jest --ci --runInBand --coverage",
+        "test:coverage": "jest --coverage",
+        "pretty": "prettier --write \"./**/*.{js,json}\""
+    }
+}

@@ -1,9 +1,20 @@
 slcsp = require('./slcsp.js')
+const fs = require('fs')
 
 const testSLCSPPath = './data/testSlcsp.csv'
 const testZipsPath = './data/testZips.csv'
 const testPlansPath = './data/testPlans.csv'
 const testOutputPath = './data/testOutput.csv'
+
+afterEach(() => {
+    try {
+        if (fs.existsSync(testOutputPath)) {
+            fs.unlinkSync(testOutputPath)
+        }
+    } catch (err) {
+        console.error(err)
+    }
+})
 
 test('can parse of CSV file using slcsp.parseCSVFile', async () => {
     let slcpsRecords = await slcsp.parseCSVFile('./data/testSlcsp.csv')

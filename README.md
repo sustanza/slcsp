@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is a solution for [SLCSP](https://homework.adhoc.team/slcsp/) (Second Lowest Cost Silver Plan). The objective can be found at the previously posted link for the exercise.
+This is a solution for [SLCSP](https://homework.adhoc.team/slcsp/) (Second Lowest Cost Silver Plan). The objective can be found at the previously posted link for the exercise. It's recommended to read the exercise information for more context.
 
 ## Local Development
 
@@ -15,10 +15,19 @@ This is a solution for [SLCSP](https://homework.adhoc.team/slcsp/) (Second Lowes
 * Install packages via NPM
   * ```npm install```
 
-### Run program using default data sets
+### Running application
+The application requires 3 arguments and an optional 4th. These are the 3 files that are included in the assignment. Which are the following:
+
+* ```slcsp.csv```
+* ```zips.csv```
+* ```plans.csv```
+
+These are all included in the data directory in the root of this project. An optional 4th argument is the final output of the slcsp file with the SLCSP rate associate to the correct zip code. By default, the application just overrides the ```slcsp.csv``` file as per the requirements. However, this was added as an additional optional argument so that the original file wouldn't be modified upon execution of the application.
+
+### Running via NPM scripts in the CLI
 ```npm run start "./data/slcsp.csv" "./data/zips.csv" "./data/plans.csv" "./data/slcspfinal.csv"```
 
-If you don't wanna add all the args
+### Running via NPM scripts in the CLI without having to add all the default data set file path arguments
 
 ```npm run start:defaults```
 

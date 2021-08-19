@@ -1,9 +1,11 @@
 const { main } = require('./main.js')
 const fs = require('fs')
+
 const testSLCSPPath = './data/testSlcsp.csv'
 const testZipsPath = './data/testZips.csv'
 const testPlansPath = './data/testPlans.csv'
 const testOutputPath = './data/testOutput.csv'
+
 afterEach(() => {
     try {
         if (fs.existsSync(testOutputPath)) {
@@ -13,7 +15,6 @@ afterEach(() => {
         console.error(err)
     }
 })
-
 
 test(`application runs saving file to ${testOutputPath}`, async () => {
     await main(testSLCSPPath, testZipsPath, testPlansPath, testOutputPath)
